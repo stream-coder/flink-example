@@ -11,5 +11,11 @@
 
   <artifactId>flink-sample-java-timer-output</artifactId>
 
-
+  <dependencies>
+    <dependency>
+      <groupId>cn.com.jerry</groupId>
+      <artifactId>flink-sample-pojo</artifactId>
+      <version>${project.all.version}</version>
+    </dependency>
+  </dependencies>
 </project>

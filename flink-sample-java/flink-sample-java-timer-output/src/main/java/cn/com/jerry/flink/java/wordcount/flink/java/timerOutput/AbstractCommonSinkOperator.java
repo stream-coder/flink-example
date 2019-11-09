@@ -1,4 +1,4 @@
-package cn.com.jerry.flink.java.timerOutput;
+package cn.com.jerry.flink.java.wordcount.flink.java.timerOutput;
 
 import java.io.Serializable;
 import java.util.ArrayList;

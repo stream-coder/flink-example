@@ -9,12 +9,13 @@
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>flink-sample-java</artifactId>
-  <packaging>pom</packaging>
-  <modules>
-    <module>flink-sample-java-timer-output</module>
-    <module>flink-sample-java-word-count</module>
-  </modules>
+  <artifactId>flink-sample-pojo</artifactId>
 
-
+  <dependencies>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.18.10</version>
+    </dependency>
+  </dependencies>
 </project>

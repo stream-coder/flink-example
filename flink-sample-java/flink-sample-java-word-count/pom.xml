@@ -18,27 +18,23 @@ under the License.
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <parent>
+    <artifactId>flink-sample-java</artifactId>
+    <groupId>cn.com.jerry</groupId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>cn.com.jerry</groupId>
-  <artifactId>flink-sample-code</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
-  <modules>
-    <module>flink-sample-java</module>
-    <module>flink-sample-scala</module>
-    <module>flink-sample-pojo</module>
-  </modules>
-  <packaging>pom</packaging>
+  <artifactId>flink-sample-java-word-count</artifactId>
+  <packaging>jar</packaging>
 
-  <name>flink-sample-code</name>
-  <url>http://www.myorganization.org</url>
+  <name>flink-sample-java-word-count</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <flink.version>1.9.1</flink.version>
     <java.version>1.8</java.version>
     <scala.binary.version>2.11</scala.binary.version>
-    <project.all.version>1.0.0-SNAPSHOT</project.all.version>
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
   </properties>
@@ -77,12 +73,12 @@ under the License.
 
     <!-- Example:
 
-    <dependency>
-      <groupId>org.apache.flink</groupId>
-      <artifactId>flink-connector-kafka-0.10_${scala.binary.version}</artifactId>
-      <version>${flink.version}</version>
-    </dependency>
-    -->
+		<dependency>
+			<groupId>org.apache.flink</groupId>
+			<artifactId>flink-connector-kafka-0.10_${scala.binary.version}</artifactId>
+			<version>${flink.version}</version>
+		</dependency>
+		-->
 
     <!-- Add logging framework, to produce console output when running in the IDE. -->
     <!-- These dependencies are excluded from the application JAR by default. -->
@@ -139,7 +135,7 @@ under the License.
               <filters>
                 <filter>
                   <!-- Do not copy the signatures in the META-INF folder.
-                  Otherwise, this might cause SecurityExceptions when using the JAR. -->
+									Otherwise, this might cause SecurityExceptions when using the JAR. -->
                   <artifact>*:*</artifact>
                   <excludes>
                     <exclude>META-INF/*.SF</exclude>
@@ -150,7 +146,7 @@ under the License.
               </filters>
               <transformers>
                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                  <mainClass>jerry.StreamingJob</mainClass>
+                  <mainClass>cn.com.jerry.flink.java.wordcount.StreamingJob</mainClass>
                 </transformer>
               </transformers>
             </configuration>
