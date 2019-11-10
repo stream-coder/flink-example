@@ -14,6 +14,8 @@
   <modules>
     <module>flink-sample-java-timer-output</module>
     <module>flink-sample-java-word-count</module>
+    <module>flink-sample-java-socket</module>
+    <module>flink-sample-java-connector-kafka</module>
   </modules>
 
 

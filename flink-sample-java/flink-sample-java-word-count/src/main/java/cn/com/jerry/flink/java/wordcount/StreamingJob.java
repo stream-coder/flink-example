@@ -58,9 +58,10 @@ public class StreamingJob {
             }
         }).print();
         // Streaming 程序必须加这个才能启动程序，否则不会有结果
-        env.execute("zhisheng —— word count streaming demo");
+        env.execute("word count streaming demo");
     }
 
     private static final String[] WORDS =
-        new String[] {"To be, or not to be,--that is the question:--", "Whether 'tis nobler in the mind to suffer"};
+        new String[] {"To be, or not to be,--that is the question:--", "Whether 'tis nobler in the mind to suffer",
+            "the bigger the dream, the more important the team"};
 }

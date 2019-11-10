@@ -18,19 +18,17 @@ under the License.
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <parent>
+    <artifactId>flink-sample-java</artifactId>
+    <groupId>cn.com.jerry</groupId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>cn.com.jerry</groupId>
-  <artifactId>flink-sample-code</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
-  <modules>
-    <module>flink-sample-java</module>
-    <module>flink-sample-scala</module>
-    <module>flink-sample-pojo</module>
-  </modules>
-  <packaging>pom</packaging>
+  <artifactId>flink-sample-java-socket</artifactId>
+  <packaging>jar</packaging>
 
-  <name>flink-sample-code</name>
+  <name>flink-sample-java-socket</name>
   <url>http://www.myorganization.org</url>
 
   <properties>
@@ -38,7 +36,6 @@ under the License.
     <flink.version>1.9.1</flink.version>
     <java.version>1.8</java.version>
     <scala.binary.version>2.11</scala.binary.version>
-    <project.all.version>1.0.0-SNAPSHOT</project.all.version>
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
   </properties>
@@ -73,6 +70,17 @@ under the License.
       <scope>provided</scope>
     </dependency>
 
+    <!-- Add connector dependencies here. They must be in the default scope (compile). -->
+
+    <!-- Example:
+
+		<dependency>
+			<groupId>org.apache.flink</groupId>
+			<artifactId>flink-connector-kafka-0.10_${scala.binary.version}</artifactId>
+			<version>${flink.version}</version>
+		</dependency>
+		-->
+
     <!-- Add logging framework, to produce console output when running in the IDE. -->
     <!-- These dependencies are excluded from the application JAR by default. -->
     <dependency>
@@ -86,19 +94,6 @@ under the License.
       <artifactId>log4j</artifactId>
       <version>1.2.17</version>
       <scope>runtime</scope>
-    </dependency>
-
-    <!-- user defined dependency-->
-    <dependency>
-      <groupId>com.alibaba</groupId>
-      <artifactId>fastjson</artifactId>
-      <version>1.2.62</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.projectlombok</groupId>
-      <artifactId>lombok</artifactId>
-      <version>1.18.10</version>
     </dependency>
   </dependencies>
 
@@ -141,7 +136,7 @@ under the License.
               <filters>
                 <filter>
                   <!-- Do not copy the signatures in the META-INF folder.
-                  Otherwise, this might cause SecurityExceptions when using the JAR. -->
+									Otherwise, this might cause SecurityExceptions when using the JAR. -->
                   <artifact>*:*</artifact>
                   <excludes>
                     <exclude>META-INF/*.SF</exclude>
@@ -152,7 +147,7 @@ under the License.
               </filters>
               <transformers>
                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                  <mainClass>jerry.StreamingJob</mainClass>
+                  <mainClass>cn.com.jerry.StreamingJob</mainClass>
                 </transformer>
               </transformers>
             </configuration>
