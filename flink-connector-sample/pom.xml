@@ -9,18 +9,6 @@
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>flink-sample-java</artifactId>
+  <artifactId>flink-connector-sample</artifactId>
   <packaging>pom</packaging>
-  <modules>
-    <module>flink-sample-java-timer-output</module>
-    <module>flink-sample-java-word-count</module>
-    <module>flink-sample-java-socket</module>
-    <module>fsj-state-backend-rocksdb</module>
-    <!-- Flink中延时调用设计与实现 -->
-    <module>fsj-delay-call</module>
-    <!-- 测试event time trigger 的用法 -->
-    <module>fsj-event-time-trigger</module>
-  </modules>
-
-
 </project>

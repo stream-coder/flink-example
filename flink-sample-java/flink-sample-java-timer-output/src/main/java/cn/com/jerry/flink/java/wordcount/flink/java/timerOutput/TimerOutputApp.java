@@ -5,7 +5,7 @@ import java.util.List;
 
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 
-import cn.com.jerry.flink.java.wordcount.flink.pojo.TransLog;
+import cn.com.jerry.flink.sample.pojo.TransLog;
 
 /**
  * @author GangW
