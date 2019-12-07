@@ -18,6 +18,8 @@
     <module>flink-sample-java-connector-kafka</module>
     <module>fsj-state-backend-rocksdb</module>
     <module>fsj-distinct-order-id</module>
+    <!-- Flink中延时调用设计与实现 -->
+    <module>fsj-delay-call</module>
   </modules>
 
 
