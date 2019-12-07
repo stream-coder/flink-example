@@ -9,7 +9,11 @@
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>flink-sample-scala</artifactId>
+  <artifactId>flink-sample-tools</artifactId>
 
+  <packaging>pom</packaging>
+  <modules>
+    <module>flink-tools-kafka-offset-monitor</module>
+  </modules>
 
 </project>
