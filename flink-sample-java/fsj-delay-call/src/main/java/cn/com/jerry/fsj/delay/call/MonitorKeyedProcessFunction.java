@@ -33,6 +33,7 @@ public class MonitorKeyedProcessFunction extends KeyedProcessFunction<String, Se
      * 每隔消息来，都要注册一个5分钟后的监控定时器。有两点优化：</br>
      * <ul>
      * <li>注册新的定时器之前，删除老的定时器</li>
+     * <li>如果收到的是迟到的消息，不会更新定时器</li>
      * </ul>
      */
     @Override
