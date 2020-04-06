@@ -6,7 +6,7 @@
     <artifactId>flink-example</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <modules>
-        <module>flink-example-case</module>
+        <module>flink-example-usecase</module>
         <module>flink-example-common</module>
         <module>flink-example-connector</module>
     </modules>
