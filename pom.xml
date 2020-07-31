@@ -9,12 +9,13 @@
         <module>flink-example-usecase</module>
         <module>flink-example-common</module>
         <module>flink-example-connector</module>
+        <module>flink-example-concept</module>
     </modules>
     <packaging>pom</packaging>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <flink.version>1.10.0</flink.version>
+        <flink.version>1.9.3</flink.version>
         <java.version>1.8</java.version>
         <scala.binary.version>2.11</scala.binary.version>
         <project.all.version>1.0.0-SNAPSHOT</project.all.version>

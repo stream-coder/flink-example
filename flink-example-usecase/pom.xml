@@ -20,7 +20,7 @@
         <module>flink-example-usecase-word-count</module>
         <module>flink-example-usecase-state-backend-rocksdb</module>
         <module>flink-example-usecase-socket</module>
-
+        <module>flink-example-usecase-watermark</module>
     </modules>
 
 </project>

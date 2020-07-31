@@ -9,10 +9,9 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>flink-example-connector</artifactId>
+    <artifactId>flink-example-concept</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>flink-example-connector-kafka</module>
-        <module>flink-example-connector-file</module>
+        <module>flink-example-concept-state</module>
     </modules>
 </project>
